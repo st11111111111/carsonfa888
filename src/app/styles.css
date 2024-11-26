@@ -1,0 +1,278 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+}
+
+body {
+    background: #000C24;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.4;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 品牌标题 */
+.brand-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    font-size: 42px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.brand-slogan {
+    color: #3B82F6;
+    font-size: 16px;
+}
+
+/* 优惠卡片 */
+.offer-card {
+    background: linear-gradient(135deg, #FF3B30, #FF9500);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.timer-label {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.timer-grid {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.time-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.time-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.time-unit {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.bonus-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+/* 实时数据卡片 */
+.stats-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.stat-value {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* 注册步骤 */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.step-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    background: #FFD700;
+    color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+/* VIP特权 */
+.vip-section {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.vip-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.vip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.vip-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 按钮组 */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.register-button {
+    background: linear-gradient(to right, #FFB800, #FFA500);
+    color: #000;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.register-button:active {
+    transform: scale(0.98);
+}
+
+.login-button {
+    background: linear-gradient(to right, #3B82F6, #2563EB);
+    color: #fff;
+}
+
+/* 链接样式 */
+.link-style {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.link-style:hover {
+    opacity: 0.9;
+}
+
+.bonus-subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.9;
+    display: block;
+    margin-top: 5px;
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .brand-name {
+        font-size: 36px;
+    }
+
+    .time-box {
+        min-width: 50px;
+    }
+
+    .time-number {
+        font-size: 28px;
+    }
+
+    .bonus-text {
+        font-size: 32px;
+    }
+
+    .step-item {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .vip-item {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .brand-name {
+        font-size: 28px;
+    }
+    
+    .bonus-text {
+        font-size: 24px;
+    }
+    
+    .time-number {
+        font-size: 20px;
+    }
+} 
